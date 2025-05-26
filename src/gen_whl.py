@@ -31,7 +31,7 @@ def gen_html_cdn():
     with open(f'{WORKDIR}/whl/wheels.html', 'r', encoding='utf-8') as html_file:
         html = html_file.read()
     with open(f'{WORKDIR}/whl/wheels-cdn.html', 'w', encoding='utf-8') as html_file:
-        html_file.write(html.replace('https://github.com/', 'https://gh.kmtea.eu/https://github.com/'))
+        html_file.write(html) # no need
 
 
 if __name__ == '__main__':
