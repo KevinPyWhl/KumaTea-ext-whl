@@ -51,7 +51,9 @@ jobs:
 
       - name: Use KGAS instead simple GitHub
         run: |
-          find . -type f -exec $SED_CMD -i 's|https://github\.com|https://git.kevinzonda.com|g' {} +
+          cd whl
+          find . -type f -exec sed -i 's|https://github\.com|https://git.kevinzonda.com|g' {} +
+          cd ..
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
