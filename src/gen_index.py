@@ -96,7 +96,7 @@ def gen_cdn_index():
             if file.endswith('.html'):
                 with open(f'{root}/{file}', 'r', encoding='utf-8') as f:
                     html = f.read()
-                html = html.replace('https://github.com/', 'https://gh.kmtea.eu/https://github.com/')
+                html = html.replace('https://github.com/', 'https://git.kevinzonda.com/')
                 with open(f'{root}/{file}', 'w', encoding='utf-8') as f:
                     f.write(html)
 
