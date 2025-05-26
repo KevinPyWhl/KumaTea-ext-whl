@@ -49,6 +49,12 @@ jobs:
         run: |
           python3 ./src/gen_index.py
 
+      - name: Use KGAS instead simple GitHub
+        run: |
+          cd whl
+          find . -type f -exec $SED_CMD -i 's|https://github\.com|https://git.kevinzonda.com|g' {} +
+          cd ..
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
